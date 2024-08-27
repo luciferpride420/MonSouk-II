@@ -1,0 +1,1644 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan',sans-serif;
+}
+
+
+
+
+
+body{
+    background-color: rgb(249, 230, 246);
+}
+h1{
+font-size: 50px;
+line-height: 64px;
+color: #693775;
+text-shadow: 2px 2px #ffffff;
+}
+h2{
+font-size: 46px;
+line-height: 54px;
+color: #141330;
+text-shadow: 2px 2px #ffffff;
+}
+h4{
+font-size: 35px;
+color: #690090;
+text-shadow: 2px 2px #ffffff;
+} 
+h6{
+font-weight: 700;
+font-size: 12px;
+}
+p{
+font-size: 16px;
+color: rgb(0, 0, 0);
+margin: 15px 0 20px 0;
+text-shadow: 2px 2px #000000;
+}
+.section-p1{
+padding: 40px 80px;
+}
+.section-m1{
+margin: 40px 0;
+}
+
+.logo{
+padding: 20px 40px;
+width: 330px;
+height: 250px;
+min-width: 15%;
+margin-left: 15%;
+margin-top: -30px;
+}
+
+
+
+
+/* Header */ 
+
+
+#header{
+    display: flex;
+    flex-wrap: nowrap ;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(255, 189, 241);
+    box-shadow: 0px 5px 15px rgba(216, 33, 233, 0.9);
+    border-radius: 0 0 10px 10px;
+    height: 130px;
+    position:  fixed;
+    width: 100%;
+    z-index: 999;
+}
+#header div{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 22%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:nowrap;
+}
+
+
+#navbar{
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+}
+.hide{
+    display: none;
+}
+#navbar li {
+    list-style: none;
+    padding: 0 80px; /* espace entre les items du header*/
+    left: -10%;
+    position:relative;
+}
+
+/* Header listed items (acceuil, shop,about, contact us) */ 
+#navbar li a
+{
+    text-decoration: none;
+    justify-content: space-around;
+    font-size: 19px;
+    font-weight: 800;
+    color: rgb(122, 55, 125);
+    transition: 0.3s ease; /*when hovering over a text, this makes it smooth*/
+}
+#navbar li a:hover{
+    color: rgb(175, 129, 215);
+}
+#navbar li a.active{
+    color: rgb(208, 127, 235);
+}
+#navbar li a.active::after,/* underline the header element the page is on*/
+#navbar li a:hover::after{ /* underline the header element the page is hovering over*/
+    content: "";
+    width:45%;
+    height: 2px;
+    background: #90399c;
+    position: absolute;
+    bottom: -6px;
+    left: 40px;
+}
+#header .carty{ 
+        position: absolute;
+        display: flex;
+        right: 10%;
+        font-size: 24px;           
+        top: 40%;
+        color: rgb(142, 23, 166);
+}
+
+#header #mobile i{
+    display: none;
+    align-items: center;
+}
+/* home page */ 
+#hero{ 
+    background-image: url(image-folder/back02.jpg);
+    background-size: 100%;
+    height: 75vh;
+    width: 100%;
+    max-width: 100%;
+    position:initial;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: top 25% right 0% bottom 25% left 10%;
+    padding: 0% 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 0;
+    justify-content: center;
+}
+#hero h4{
+    padding-bottom:15px;
+}
+#hero h1, 
+#hero p{
+color: #db05c9;
+font-weight: bold;
+}
+
+
+
+
+
+/*---BUTTONS--- start---*/
+#hero button,
+#product1 button,
+#banner button,
+#sm-banner button,
+#banner3 button,
+#newsletter button, 
+.cartbutton,
+#form-details .button,
+#coupon .button,
+#subtotal button
+{
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  max-width:fit-content;
+  left: 15%;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  color:rgb(255, 44, 244);
+  font-family:Arial, Helvetica, sans-serif;
+  touch-action: manipulation;
+}
+#hero button:before,
+#product1 button:before,
+#banner button:before,
+#sm-banner button:before,
+#banner3 button:before,
+#newsletter button:before, 
+.cartbutton:before,
+#form-details .button:before,
+#coupon .button:before,
+#subtotal button:before
+{
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+    position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  25%{
+    background-position: 300% 0;
+  }
+  50% {
+    background-position: 600% 0;
+  }
+  75%{
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+#hero button:active,
+#product1 button:active,
+#banner button:active,
+#sm-banner button:active,
+#banner3 button:active,
+#newsletter button:active, 
+.cartbutton:active,
+#form-details .button:active,
+#coupon .button:active,
+#subtotal button:active
+{
+    transition: 0.01s ease; /*when hovering over a text, this makes it smooth*/
+    color: #48ff00;
+}
+#hero button:after,
+#product1 button:after,
+#banner button:after,
+#sm-banner button:after,
+#banner3 button:after,
+#newsletter button:after, 
+.cartbutton:after,
+#form-details .button:after,
+#coupon .button:after,
+#subtotal button:after
+{
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #202320;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/*---BUTTON SHOP NOW --- end---*/
+
+
+
+#feature {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#feature .fe-box{
+    z-index: 10;
+    text-align: center;
+    padding: 5px 15px;
+    box-shadow: 10px 10px 54px rgba(255, 44, 244, 0.10);
+    width: 245px;
+    border: 1px solid #570255;
+    border-radius: 8px;
+    background: #fedff2;
+    margin-bottom: 20px;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(234, 77, 243, 0.687);
+    z-index: 9;
+}
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: -18px;
+    image-rendering:optimizeSpeed; 
+}
+#feature .fe-box h6{
+    padding: 8px 8px 6px 8px;
+    line-height: 1;
+    margin: 0px;
+    border-radius: 2px;
+    color: #ff0000;
+    margin-top: 19px;
+    background-color: rgba(146, 10, 148, 0.03);
+    display: inline-block;
+    margin-bottom: 9px;
+}
+#feature .fe-box:nth-child(2) h6{
+    color: #ff00c8;
+                }
+#feature .fe-box:nth-child(3) h6{
+    color:  #000000;
+}
+#feature .fe-box:nth-child(5) h6{
+    color: #bb0456;
+} 
+#feature .fe-box:nth-child(4) h6{
+    color: #ff7300;
+}
+#feature .fe-box:nth-child(6) h6{
+    color: #7a00ff;
+}
+/*-----------Start of featured products index page------------*/
+#product1{
+    text-align: center;
+}
+#product1 h2{ /*Titre avant les produit affiché sur index*/
+    color: #000000;
+    text-shadow: 2px 2px #efa5ff;
+}
+#product1 p{/*Sous-Titre avant les produit affiché sur index*/
+    color: #381031;
+    text-shadow: 2px 2px #e057ff;
+}
+#product1 .pro-container{ /* 8 products displayed at the time*/
+   display:flex;
+   flex-wrap:nowrap;
+   justify-content: center;
+   position: relative;
+    width: 100%;
+    flex-wrap:wrap;
+
+}
+#product1 .pro{ /*product box */
+    max-width: 20%;
+    min-width: 270px;
+    padding: 10px 12px;
+    border-radius: 25px;
+    border: 4px solid #000000;
+    background-color: #c168f9;
+    align-content: center;
+    cursor: pointer;
+    justify-content: space-between; 
+    margin: 7px 17px 3px 0px;
+    z-index: 50;
+    box-shadow: 10px 10px 54px rgba(252, 224, 252, 0.445);
+    transition: 0.2s ease;
+}
+#product1 .pro img{/*product image inside box */
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro:hover{/*hovering over the product box */
+    box-shadow: 10px 10px 54px rgba(255, 82, 223, 0.6);
+    background-color: #000000;
+    border-color: #f83fff;
+    z-index: 5;
+}
+#product1 .pro:active{/*clicking on the product box */
+    border-color: #ff0202;
+}
+#product1 .pro .des{/*all of the product brand(span) h5(description text)*/
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{/*name of brand products*/
+    color: #ad1079;
+    font-size: 25px;
+}
+#product1 .pro .des h5{ /*text Description of products*/
+    padding-top: 7px;
+    color: #ffffff;
+    margin: 4px 0px;
+    font-size: 14px;
+}
+#product1 .star{/*all the stars displayed on the product box */
+    display: inline-flex;
+    width: fit-content;
+    justify-content: space-evenly;
+}
+#product1 i {/* each single product review stars*/
+    color: #f5db16;
+    display:inline;
+    position: relative;
+    justify-content:center;
+    font-size: 20px;    
+    align-content: center;
+}
+#product1 .pro .des h4{ /*Price of product*/
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: fit-content;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px #ff25fff3;
+}
+#product1 .btnproduct{/*Shop button in product1*/
+    position: relative;
+    left:17%;
+}
+/*-----------End of featured products index page------------*/
+/*-----------start of collection banner index page------------*/
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(image-folder/banners/bannerindex.png);
+    width: 100%;
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner h4{
+    color: #5f1681;
+    text-shadow: 2px 2px #da6bda;
+    font-size: 18px;
+}
+#banner h2{
+    margin-top: 20px;
+    font-size: 40px;
+}
+#banner h2 span{
+    color: #ff0000;
+    text-shadow: 2px 2px #000000;
+}
+#banner button{
+    top:20px;
+    left:0;
+}
+/*-----------End of collection banner index page------------*/
+/*-----------start of adding some other banners index page------------*/
+#sm-banner{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   position: relative;
+}
+#sm-banner .banner-box{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px;
+    right: 0;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    width: 750px;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    }
+#sm-banner h4{
+        color: #de71ff;
+        font-size: 20px;
+        font-weight: 300;
+    }
+#sm-banner h2{
+        color: #d92cb4;
+        font-weight: 500;
+    }
+#sm-banner .banner-box span{
+    align-items: flex-start;
+    text-shadow: 2px 2px #000000;
+    text-align: end;
+    color: #e571ff;
+    font-weight: 800;
+    }
+#sm-banner .button /* boutton (en savoir plus/j'en profite)*/
+    {
+    margin: 0px;
+    top: 28px;
+    }
+#sm-banner .banner-box1{
+    background-image: url(image-folder/banners/b11.jpg);
+}
+#sm-banner .banner-box2{
+    background-image: url(image-folder/banners/b12.jpg);
+}
+
+#sm-banner .banner-box:hover{/*hovering over the product box */
+    box-shadow: 10px 10px 84px rgba(255, 0, 0, 0.705);
+    border-color: #fc97ff;
+    background-color: transparent;
+    color: transparent;
+    z-index: 5;
+}
+/*-----------end of adding some other banners index page------------*/
+/*-----------Start of adding three banners before newsletter index page------------*/
+#banner3 .banner-box1{
+    background-image: url(image-folder/banners/b7.jpg);
+}
+#banner3 .banner-box2{
+    background-image: url(image-folder/banners/b4.jpg);
+}
+#banner3 .banner-box3{
+    background-image: url(image-folder/banners/b3.jpg);
+}
+
+#banner3 {
+    display: flex;
+    margin:  0;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 0px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    height: 30vh;
+    position:relative;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+#banner3 h2{
+    color: #f15cd1;
+    font-weight: 900;
+    font-size: 22px;
+    text-shadow: 2px 2px #ffffff;
+}
+#banner3 h3{
+    font-weight: 800;
+    color: #fff8ff;
+    text-shadow: 2px 2px #db79ff;
+    font-size: 15px;
+}
+#banner3  button{
+    top:35px;
+}
+#banner3 .banner-box:hover{/*hovering over the product box */
+    border-color: #fc97ff;
+    background-color: transparent;
+    color: transparent;
+    z-index: 0;
+}
+#banner3 .banner-box1:hover{/*hovering over the product box */
+    box-shadow: 10px 10px 84px rgb(248, 255, 37);
+}
+#banner3 .banner-box2:hover{/*hovering over the product box */
+    box-shadow: 10px 10px 84px rgb(84, 207, 255);
+}
+#banner3 .banner-box3:hover{/*hovering over the product box */
+    box-shadow: 10px 10px 84px rgba(158, 74, 6, 0.859);
+}
+/*-----------end of adding three banners before newsletter index page------------*/
+/*-----------Start of newsletter index page------------*/
+#newsletter{
+display: flex;
+justify-content: space-between;
+text-align: center;
+flex-direction: column;
+align-items: center;
+flex-wrap: wrap;
+background-image:url(image-folder/banners/newsletter.png);
+background-repeat: no-repeat;
+background-position: 20% 30%;    
+background-size: cover;
+background-position: center;
+background-color: transparent;
+}
+#newsletter h4{
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+}
+#newsletter p{
+    font-size: 14px;
+    color: #ffffffc6;
+    font-weight: 600;
+}
+#newsletter p span{
+    color: #e9ed16;
+}
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 14px;
+    width: 60%;
+    border: 5px solid rgb(0, 0, 0);
+    box-shadow: -10px 15px 34px hsla(273, 94%, 7%, 0.705);
+    border-radius: 10px;
+    outline: none;
+}
+#newsletter .form{
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    display: inline;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#newsletter button{
+    margin: 20px 30px;
+    left:60px;
+}
+/*-----------end of newsletter index page------------*/
+/*-----------start of footer index page------------*/
+#footer {
+display: flex;
+    flex-wrap: nowrap;
+justify-content: space-evenly;
+}
+
+
+#footer .col { /* les colonnes de chaque footer-menu */
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 20px;
+    padding: 5px 0px 10px -50px;
+
+}
+#footer .cloo{
+    margin: 20px;
+}
+
+#footer .install img{ /* appstore et google play image*/
+    margin: 0px 0px 15px 0px;
+    width: 190px;
+}
+#footer .install .rom{
+    display: flex;
+    margin: 0px 0px 5px 5px;
+    justify-content: space-evenly;    
+    flex-wrap: wrap;
+ }
+
+#footer .col a{  /* Les liens dispo dans tout le footer*/
+    bottom:20px;
+    margin :10px;
+}
+#footer .logo{ /* Logo dispo dans le footer*/
+    padding: 0px 0px 0px 0px;
+    width: fit-content;
+}
+#footer h4{/* 3 derniers grand titres du footer (a propos/compte client/installer l'app*/
+    font-size: 14px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    color: #000000;
+    text-shadow: 2px 2px #d373ff;
+    margin: 15px 0 8px 0;
+    }
+#footer .install h4,
+#footer .install p{
+    text-align: center;
+}
+
+
+#footer h3{ /* 2 premier titre dispo dans le footer (contact/followUs*/
+        font-size: 22px;
+        color: #9a009a;
+        margin: 10px 5px 8px 5px;
+        }
+#footer a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #929292;
+    margin-bottom: 10px;
+
+        }
+#footer .follow{
+            margin-top: 20px;
+         }
+
+#footer p{
+    font-size: 18px;
+    color: #000000;
+    text-shadow: 2px 2px #f6ccff;
+    margin: 15px 5px 8px 5px;
+}
+#footer .follow i{
+    color: #1f1f1fbb;
+    display: inline;
+    align-items: center;
+    inline-size: 70%;
+    left: 200px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#footer .follow i:hover,
+#footer a:hover
+{
+    color: #a755ff;
+
+}
+.copyright p{
+    width: 100%;
+    color: #000000;
+    text-shadow: 2px 2px #f3bcff;
+    text-align: center;
+}
+
+/*-----------end of footer index page------------*/
+/*-----------start of copyrighy index page------------*/
+
+/*-----------end of copyrighy index page------------*/
+
+
+
+/* single product */ 
+
+/* about page */ 
+/* contact page */ 
+/* */ 
+/* */ 
+/* */ 
+/* */ 
+/* */ 
+
+
+
+
+/*/////////////////////////////////////////////////////////////*/
+/* shop page */ 
+.shop{
+    text-align: center;    
+}
+#pageheader{
+    background-image: url(image-folder/bg-shop.jpg);
+    height: 45vh;
+    width: 100%;
+    border: #ff99ec solid 7px;    
+    box-shadow: 0px 20px 58px #fb7cff;
+    background-size: 100%;
+    background-repeat:no-repeat;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pageheader h2{
+text-align: center;
+font-size: 65px;
+color: #c740f0;
+}
+#pageheader p{
+text-align: center;
+color: #fb11ff;
+text-shadow: 2px 2px #ffffff;
+font-size: 25px;
+}
+
+#pagination{
+    display:flex;
+    justify-content: space-between;
+    margin: 0px;
+    flex-wrap: nowrap;    
+    padding-left: 45% ; 
+    width:fit-content;
+}
+
+#pagination a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 0px; /* espace entre les items du header*/
+    background-color: #690090;
+    font-weight: 700;
+    width: 49px;
+
+}
+#pagination a i{
+    font-size: 20px;
+}
+
+
+/*///////////////////////////End Shop page//////////////////////////////////*/
+
+
+/*////////////////////////////////Start Single product page/////////////////////////////*/
+.headershop{
+    top:0;
+}
+#prodetails{
+    display: flex;  
+    flex-wrap: wrap;  
+    margin-top: 129px;
+    flex-wrap: inherit;
+    border-radius: 10px;
+    border: #fb7cff solid 5px;
+    padding: 20px 50px ;
+    background: #e5d5ff;
+    justify-content: space-evenly;
+}
+
+#mainImg{
+    border: #fb7cff solid 5px;
+    border-radius: 10px;
+}
+#mainImg:hover,
+#prodetails:hover,
+#prodetails .single-pro-details:hover,
+.small-img-col:hover,
+.small-img-col:hover
+{
+    box-shadow: 0px 20px 88px #fb7cff;
+    border: #000000 solid 5px;
+}
+
+
+#prodetails .single-pro-image,
+#prodetails .single-pro-details{
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+
+
+.command-detail{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#prodetails .single-pro-details{
+    width: 100%;
+    border: #fb85ff solid 5px;
+    background-color: #fac8f4;
+    border-radius: 10px;
+    padding-top: 30px;
+    justify-content: space-evenly;
+}
+#prodetails .single-pro-details h4{
+    font-size: 30px;
+    text-shadow: 2px 2px #e855ff;
+    padding: 20px 0 20px 0;
+}
+#prodetails .single-pro-details h3{
+    font-size: 25px;
+    color: #000000;
+    text-shadow: 2px 2px #e855ff;
+    }
+
+#prodetails .single-pro-details h2{
+    font-size: 45px;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+    }
+
+#prodetails .single-pro-details input{
+width: 60px;
+height: 47px;
+padding-left: 10px;
+    }
+#prodetails .single-pro-details input:focus{
+    outline:non;
+}
+#prodetails .selection{
+    display: flex;
+    padding: 5px 10px;
+    font-size: 18px;
+    margin: 10px 15px 20px 20px;
+    width: 500px;
+    height: 50px;
+}
+#prodetails span{
+    color: #ab02bdcb;
+    font-weight: 900;
+    font-size: 25px;
+} 
+.cartbutton{
+    margin: 20px 25%;
+}
+.Q-P{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    background-color: #dedddd;    
+    border-radius: 10px;
+    border: rgb(248, 123, 255) solid 5px;
+    cursor: pointer;
+}
+
+/*/////////////////////////////////////////////////////////////*/
+/* /////////////////////// About Page /////////////////////////*/
+body{
+    display:flex;
+    width: 100%;
+    padding-bottom: 50px;
+flex-direction: column;
+}
+#header{
+display: flex;
+}
+#page-header div{
+    background-position: 0% 50%;
+    color: rgb(158, 0, 0);
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-image:url(image-folder/banners/b222.png) ;
+    background-repeat: no-repeat;
+    height: 500px;
+    padding-top: 250px;
+
+}
+#page-header .about-header{
+    background-color: #000000;
+    margin-top: 82%;
+    background-position: center;
+    width: 180%;   
+    border: #ff99ec solid 7px;    
+}
+
+#about-head{
+    width: 100%;
+    height: auto;
+    background-size:auto;
+    display: flex;
+    margin: 40px;
+    padding: 0 40px;
+}
+#about-head .about-text{
+    margin: 40px;
+    font-size: 30px;
+}
+#about-head .Dotext{
+    font-size: 25px;
+    margin: 0px 20px 20px 20px;
+}
+#about-head p{
+    font-size: 25px;
+    font-weight: 900;
+    color: #000000;
+    text-shadow:2px 2px #d84cff;
+}
+#about-head img{
+    border: #000000 5px solid;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+}
+#about-head img:hover{
+    border: 5px solid #d95dff;    
+    box-shadow: 2px 5px 50px rgb(245, 139, 255);
+}
+#about-head marquee{
+    margin-top: 80px;
+}
+#about-app{
+    text-align: center;
+}
+#about-app .video{
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+#about-app .video video{
+    width: 100%;
+    height: 100%;
+border-radius: 20px;
+}
+/* /////////////////////// END About Page /////////////////////////*/
+
+
+
+/* /////////////////////// Contact Page /////////////////////////*/
+#contact-header div {
+    background-position: 0% 50%;
+    color: rgb(158, 0, 0);
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url(image-folder/banners/contacthead.jpg);
+    background-repeat: no-repeat;
+    height: 500px;
+    padding-top: 250px;
+}
+
+#contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details .details{
+    width: 50%;
+}
+
+#contact-details .details span,
+#form-details form span{
+    font-size: 25px;
+}
+#contact-details .details h2,
+#form-details form h2{
+    font-size: 35px;
+    line-height: 45px;
+    padding: 20px 0;
+}
+#contact-details .details h3{
+    font-size: 16px;
+    padding-bottom: 15px;
+    font-weight: 1000;
+}
+#contact-details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+#contact-details .details li i{
+    font-size: 15px;
+    padding-right: 22px;
+    color: #c255e3;
+}
+#contact-details .details li p{
+    margin: 0;
+    text-shadow: none;
+    color: #645f5f;
+    font-size: 15px;
+}
+#contact-details .map{
+    width: 55%;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    height: 400px;
+}
+#contact-details .map iframe{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+#form-details{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 30px;
+    align-items: center;
+    padding: 80px;
+    border: 3px solid rgb(118, 38, 118);
+}
+#form-details form{
+width: 65%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea{
+width: 100%;
+padding: 12px 15px;
+outline: none;
+margin-bottom: 20px;
+border: #000000 solid 2px;
+}
+
+#form-details .people div{
+padding-bottom: 25px;
+display: flex;
+align-items: flex-start;
+}
+#form-details .people div img{
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+#form-details .people div p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+#form-details .people div p span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+/* /////////////////////// END Contact Page /////////////////////////*/
+
+/* /////////////////////// Cart Page /////////////////////////*/
+#cart{
+    overflow-x: auto;
+}
+
+#cart,
+#coupon,
+#subtotal{
+    margin: 20px;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+#cart:hover,
+#coupon:hover,
+#subtotal:hover{
+    border: 2px rgb(178, 33, 227) solid;
+    box-shadow: 2px 2px 50px rgb(104, 6, 129);
+}
+
+#cart-header div {
+    text-align: center;
+    background-size: cover;
+    background-image: url(image-folder/banners/cart-banner.jpg);
+    background-repeat: no-repeat;
+    height: 350px;
+    padding-top: 190px;
+}
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img {
+    width: 80px;
+}
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6)
+{
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input {
+width: 70px;
+padding: 10px 5px 10px 15px;
+}
+
+#cart table thead{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+}
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+#cart table tbody tr td{
+padding-top: 15px;
+}
+#cart table tbody td{
+    font-size: 14px;
+}
+
+#cart-add{
+    display: inline-flex;
+}
+#coupon{
+    padding: 50px;
+    width: 50%;
+margin-bottom: 30px;
+}
+#coupon h3,
+#subtotal h3{
+    padding-bottom: 15px;
+}
+
+#coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 100%;
+    margin-right: 10px;
+    border: 2px solid rgb(86, 40, 103);
+    border-radius: 10px;
+}
+#coupon div {
+    padding-top: 45px;
+}
+#subtotal{
+    padding: 50px;
+    width: 50%;
+    margin-bottom: 30px;
+    border: 2px solid #000000;
+}
+
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+}
+#subtotal table td{
+    width: 50%;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 15px;
+}
+#coupon button,
+#subtotal button{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+/* /////////////////////// END Cart Page /////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*START MEDIA QUERY*/
+
+/*iPad MEDIA QUERY*/
+@media screen and (min-device-width: 768px) 
+    and (max-device-width: 1025px){     
+
+#footer .logo{
+        height: 90px;
+        min-width: 140px;
+            }
+#navbar li {
+            padding: 0 20px; /* espace entre les items du header*/
+            position:static;
+            padding: 0;
+            }
+#navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align:start;
+            justify-content: space-between;
+            position: fixed;
+            right: -300px;
+            height: 35vh;
+            border-radius: 10px 0px 0px 10px;
+            width: 300px;
+            z-index: 5;
+            background-color: rgb(255, 207, 245);
+            box-shadow: 0px 30px 40px rgba(235, 115, 235, 0.859);
+            padding: 50px 0 0 10px;
+            top: 12%;
+            transition: 0.3s ease;
+        }
+
+#navbar li{
+            right: 80px;
+            width: 0px;
+            }  
+
+#header .carty{ 
+    position: initial;
+        }
+#navbar.active{
+            top: 125px;
+            box-shadow: 0px 30px 40px rgba(235, 115, 235, 0.859);
+            right: -40px;
+                }
+#navbar li{
+            margin-bottom: 25px;
+            }
+
+#header #mobile i{
+            color: #8c268a;
+            z-index: 100;
+            font-size: 24px;           
+            display: flex;
+            flex-wrap: wrap;
+            width: fit-content;
+            align-items: center;   
+            padding: 0% 0% 0% 0%;        
+                }
+#prodetails{
+        flex-direction: column;
+            }
+#footer .install .rom{
+            justify-content: space-between;
+            display: flex;
+            margin: 0px 0px 15px 25px;
+            flex-wrap: wrap;
+                    }
+.hide{
+            display: flex;
+        }
+
+/* About page */
+
+
+#about-head{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    flex-wrap: wrap;
+}
+#about-app{
+    padding: 0px;
+}
+#about-head .about-text{
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+#about-head img {
+    margin: 25px;
+    width: 100%;
+    height: 50%;
+}
+.video{
+width: fit-content;
+}
+
+/* contact page */
+#contact-details {
+    margin: 0px 40px;
+    padding: 0 10px;
+}
+#contact-details .details h2, 
+#form-details form h2 {
+    font-size: 25px;
+}   
+#form-details{
+    margin:  20px 20px;
+    padding: 10px;
+}
+#form-details div{
+    margin-left: 20px;
+}
+#contact-header div {
+    background-size: 100%;
+    height: 500px;
+    padding-top: 190px;
+}
+/* cart page */
+#cart-add {
+padding: 0;
+}
+
+}
+/*END iPad MEDIA QUERY*/
+
+
+/*Mid-range Mobile Phones Portrait or Landscape QUERY*/
+@media screen 
+    and (max-device-width: 640px) {
+        body{
+            width: 650px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+}
+#hero{
+    height: 650px;
+    
+}
+#header{
+    top: 0%;
+    width: 650px;
+            left: 0%;
+}
+
+#navbar {
+    margin-top: -3px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 200px;
+    height: 350px;
+    right: -300px;
+    border-radius: 10px 0px 0px 10px;
+    z-index: 5;
+    background-color: rgb(250, 187, 236);
+    border: 2px solid rgb(253, 121, 255);
+    border-top: transparent;
+    border-right: transparent;
+    box-shadow: 0px 30px 40px rgba(209, 20, 203, 0.859);
+}
+#banner{
+    height: 35vh;
+}
+#navbar.active{
+        right: 7; /* Adjusted to show the menu */
+        transition: right 0.3s ease; /* Smooth transition */
+    }
+
+#sm-banner .banner-box{
+            right: 0;
+            border: 5px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            flex-direction: column;
+            justify-content: center;
+            width: 750px;
+            height: 35vh;
+            background-size: cover;
+            background-position: center;
+            }
+#sm-banner h4{
+                color: #de71ff;
+                font-size: 20px;
+                font-weight: 300;
+            }
+#sm-banner h2{
+                color: #d92cb4;
+                font-size: 15px;
+                font-weight: 500;
+            }
+#sm-banner p{
+                font-size: 18px;
+            }         
+            #banner3 h2{
+                font-size: 12px;
+            }
+            #banner3 h3{
+                font-size: 10px;
+            }
+            #banner3  button{
+                top:15px;
+            }
+#footer .install img{ /* appstore et google play image*/
+                margin: 0px 0px 15px -25px;
+                width: 180px;
+            }
+#about-head{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    flex-wrap: wrap;
+}
+#about-app{
+    padding: 0px;
+}
+#about-head .about-text{
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+#about-head img {
+    margin: 25px;
+    width: 100%;
+    height: 50%;
+}
+#feature{
+    display: flex;
+    padding: 3px;
+    margin: 0 10px ;
+    flex-wrap: wrap;
+}
+#header #mobile i{
+    display: flex;
+    margin: 50px;
+}
+.video{
+width: fit-content;
+}    
+/* contact page */
+#contact-details {
+    margin: 10px 20px;
+    padding: 0 ;
+}
+ 
+#form-details{
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+#form-details div{
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+#contact-header div {
+    background-size: 100%;
+    height: 500px;
+    padding-top: 190px;
+}
+
+}   
+/*END Phone MEDIA QUERY*/
+
+/*Mobile MEDIA QUERY*/
+@media  (max-device-width: 480px) 
+    and ( orientation : portrait){
+    
+body{
+            width: fit-content;
+
+        }
+#header{
+            top: 0%;
+            width: 100%;    
+            left: 0%;
+        }
+#navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align:start;
+    justify-content: space-around;
+    position: fixed;
+    top: 130px;
+    right: -300px;
+    height: 70vh;
+    border-radius: 10px 0px 0px 10px;
+    width: 200px;
+    z-index: 5;
+    background-color: rgb(255, 207, 245);
+    box-shadow: 0px 30px 40px rgba(209, 20, 203, 0.859);
+    padding: 80px 0 0 10px;
+}
+#navbar.active{
+        right: 0; /* Adjusted to show the menu */
+        transition: right 0.3s ease; /* Smooth transition */
+        }
+.logo{
+            padding: 0px 0px;
+            width:250px;
+            height: 220px;
+            margin-left: 30%;
+}
+#hero{
+    height: 650px;
+    
+}
+    }
+
+@media screen and (min-device-height: 914px) and (max-device-height: 914px) 
+    and (max-device-width: 412px) and (min-device-width: 412px)
+    {
+        #header #mobile i {
+            color: #8c268a;
+            display: flex;
+            font-size: 25px;
+        }
+        .hide{
+            display: flex;
+        }
+    }
+/*End Mobile MEDIA QUERY*/
+
+@media screen and (min-device-height: 600px) and (max-device-height: 600px) 
+        and (max-device-width: 1024px) and (min-device-width: 1024px){
+
+            #navbar {
+                height: 300px;
+            }
+        }
+@media screen and (min-device-height: 1280px) and (max-device-height: 1280px) 
+        and (max-device-width: 853px) and (min-device-width: 853px){
+            #prodetails{
+                display:flex;
+                flex-direction: column;
+            }
+        }
+    
