@@ -61,7 +61,6 @@ margin-top: -30px;
 
 /* Header */ 
 
-
 #header{
     display: flex;
     flex-wrap: nowrap ;
@@ -95,7 +94,7 @@ margin-top: -30px;
 }
 #navbar li {
     list-style: none;
-    padding: 0 80px; /* espace entre les items du header*/
+    padding: 0 40px; /* espace entre les items du header*/
     left: -10%;
     position:relative;
 }
@@ -254,6 +253,24 @@ font-weight: bold;
     background-position: 0 0;
   }
 }
+
+
+#hero button:hover,
+#product1 button:hover,
+#banner button:hover,
+#sm-banner button:hover,
+#banner3 button:hover,
+#newsletter button:hover, 
+.cartbutton:hover,
+#form-details .button:hover,
+#coupon .button:hover,
+#subtotal button:hover
+{
+    transition: 0.03s ease; /*when hovering over a text, this makes it smooth*/
+    color: #f74bfd;
+}
+
+
 #hero button:active,
 #product1 button:active,
 #banner button:active,
@@ -772,7 +789,7 @@ justify-content: space-evenly;
     text-align: center;    
 }
 #pageheader{
-    background-image: url(image-folder/bg-shop.jpg);
+    background-image:url(image-folder/banners/bg-shop.jpg) ;
     height: 45vh;
     width: 100%;
     border: #ff99ec solid 7px;    
