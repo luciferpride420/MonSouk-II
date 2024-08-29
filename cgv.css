@@ -65,9 +65,12 @@ text-align: center;
     margin: 5px 0;
     color: #e354ff;
 }
-#nav .nav-link:active,
-#nav .nav-link:after{
+#nav .nav-link:active{
     color: #000000;
+}
+
+#nav .nav-link:hover{
+    color: #8800d6;
 }
 fieldset {
     text-align: center;
