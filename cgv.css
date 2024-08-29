@@ -33,7 +33,9 @@ h1{
     text-align: center;
 }
 p{
+    font-weight: 900;
     text-shadow: none;
+    color: rgb(78, 78, 78);
     }
 /**/
 
@@ -81,7 +83,7 @@ fieldset {
 }
 fieldset:hover{
     box-shadow: 10px 10px 50px #dd00ff;
-    background-color: #ee83ff;
+    background: linear-gradient(#f6bdff, rgb(236, 109, 255));
     border: #dd00ff solid 2px;
 }
 fieldset p{
