@@ -80,6 +80,8 @@ fieldset {
     border-radius: 50%;
 }
 fieldset:hover{
+    box-shadow: 10px 10px 50px #dd00ff;
+    background-color: #ee83ff;
     border: #dd00ff solid 2px;
 }
 fieldset p{
@@ -93,6 +95,7 @@ section{
 }
 section:hover{
     border: #000000 solid 2px;
+    background-color: hsl(292, 100%, 90%);
     box-shadow: 10px 10px 50px #e354ff;
 }
 fieldset li{
