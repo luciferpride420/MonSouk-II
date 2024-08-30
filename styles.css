@@ -680,7 +680,7 @@ justify-content: space-evenly;
     text-align: start;
     margin-bottom: 20px;
     padding: 5px 0px 10px -50px;
-
+    align-items: flex-start;
 }
 #footer .cloo{
     margin: 20px;
